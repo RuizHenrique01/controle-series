@@ -20,8 +20,13 @@ class SeriesController extends Controller
         }
         $html .= '</ul>';
 
-        return view("listar-series", [
+        return view("series.index", [
             'series' => $series
         ]);
+    }
+
+
+    public function create(){
+        return view("series.create");
     }
 }
